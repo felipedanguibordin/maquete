@@ -40,12 +40,14 @@ function showSection(element) {
 }
 
 function updateNav(element) {
+  const target = element.getAttribute("href").split("#")[1];
   for (let i = 0; i < totalNavList; i++) {
-    allSection[i].querySelector("a").classList.remove("active");
-    const target = element.getAttribute("href").split("#")[1];
-    if (
-      target === navList[i].querySelector("a").getAttribute("href").split("#")
-    ) {
+    navList[i].querySelector("a").classList.remove("active");
+    const navTarget = navList[i]
+      .querySelector("a")
+      .getAttribute("href")
+      .split("#")[1];
+    if (target === navTarget) {
       navList[i].querySelector("a").classList.add("active");
     }
   }
