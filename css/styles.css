@@ -375,51 +375,6 @@ h3.about {
   margin-top: 10px;
 }
 
-@media (max-width: 1199px) {
-  .section .container {
-    padding-top: 70px;
-  }
-
-  .aside {
-    left: -270px;
-  }
-
-  .aside .nav-toggler {
-    display: flex;
-    left: 30px;
-  }
-
-  .aside.open {
-    left: 0;
-  }
-
-  .aside .nav-toggler.open {
-    left: 300px;
-  }
-
-  .section {
-    left: 0;
-  }
-
-  .section.open {
-    left: 270px;
-  }
-
-  .about .about-content .personal-info .info-item p span {
-    display: block;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 991px) {
-  .contact .contact-info-item,
-  .portifolio .portifolio-item,
-  .service .service-item {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
 .about .about-content {
   flex: 0 0 100%;
   max-width: 100%;
@@ -677,4 +632,86 @@ h3.about {
   font-size: 16px;
   color: var(--text-black-700);
   line-height: 25px;
+}
+
+.portifolio .portifolio-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.portifolio .portifolio-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+
+.portifolio .portifolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+.portifolio .portifolio-item-inner {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portifolio .portifolio-item-inner .portifolio-img img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .section .container {
+    padding-top: 70px;
+  }
+
+  .aside {
+    left: -270px;
+  }
+
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler.open {
+    left: 300px;
+  }
+
+  .section {
+    left: 0;
+  }
+
+  .section.open {
+    left: 270px;
+  }
+
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .home .home-img {
+    display: none;
+  }
+
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .contact .contact-info-item .portifolio .portifolio-item,
+  .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
