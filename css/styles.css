@@ -618,6 +618,10 @@ h3.about {
   background: var(--skin-color);
 }
 
+.title {
+  color: var(--text-black-900);
+}
+
 .service .service-item .service-item-inner:hover .icon .fa {
   font-size: 25px;
   color: #fff;
