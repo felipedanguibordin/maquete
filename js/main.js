@@ -52,6 +52,38 @@ function updateNav(element) {
     }
   }
 }
+
+function updateNav(element) {
+  for (let i = 0; i < totalNavList; i++) {
+    navList[i].querySelector("a").classList.remove("active");
+  }
+  element.classList.add("active");
+}
+
+function updateNavigation() {
+  const scrollPosition = window.scrollY;
+
+  // Loop através de cada seção para verificar se está visível
+  allSection.forEach(function (section, index) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      // Se a seção estiver visível, marque o item de navegação correspondente como ativo
+      updateNav(navList[index].querySelector("a"));
+    }
+  });
+}
+
+// Adiciona o evento de rolagem para atualizar a navegação
+document.addEventListener("scroll", updateNavigation);
+
+// Chama a função inicialmente para marcar o item de navegação correto quando a página é carregada
+updateNavigation();
+
 function addBackSection(num) {
   allSection[num].classList.add("back-section");
 }
