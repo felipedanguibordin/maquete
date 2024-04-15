@@ -723,3 +723,9 @@ h3.about {
     max-width: 50%;
   }
 }
+
+.codigo {
+  background-color: red !important;
+  color: greenyellow !important;
+  background: red !important;
+}

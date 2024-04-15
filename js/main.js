@@ -107,3 +107,39 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
 navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBtn();
 });
+
+const keySequence = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a",
+];
+
+let keyPressed = 0;
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === keySequence[keyPressed]) {
+    keyPressed++;
+
+    if (keyPressed === keySequence.length) {
+      const elementsToModify = document.querySelectorAll(
+        ".aside, section, .container, .home, .about, .service, .portifolio"
+      );
+
+      elementsToModify.forEach((element) => {
+        element.classList.add("codigo");
+      });
+
+      console.log("O código foi inserido corretamente!");
+      keyPressed = 0;
+    }
+  } else {
+    keyPressed = 0; // Resetar contador se a tecla pressionada estiver errada
+  }
+});
