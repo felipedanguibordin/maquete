@@ -143,3 +143,15 @@ document.addEventListener("keydown", (event) => {
     keyPressed = 0; // Resetar contador se a tecla pressionada estiver errada
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggler = document.querySelector(".nav-toggler");
+  const asides = document.querySelector(".aside");
+  const sections = document.querySelectorAll(".section");
+
+  navToggler.addEventListener("click", () => {
+    asides.classList.toggle("open");
+    navToggler.classList.toggle("open");
+    sections.forEach((section) => section.classList.toggle("open"));
+  });
+});
